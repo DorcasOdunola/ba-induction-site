@@ -5,7 +5,7 @@
  * ====================================================================
  * 
  * Edit this file to update personal details, images, contact info,
- * event dates, and wishlist items. Everything is dynamically rendered.
+ * event dates, photo gallery, and support items. Everything is dynamically rendered.
  */
 
 const SITE_DATA = {
@@ -36,15 +36,14 @@ const SITE_DATA = {
   // 2. CONTACT & SUPPORT CONFIGURATION
   // ------------------------------------------------------------------
   contact: {
-    // IMPORTANT: Replace with Blessing's actual WhatsApp phone number (with country code, no + or spaces)
-    // Example: "2348012345678"
-    whatsappNumber: "2348000000000", 
-    whatsappDisplay: "+234 800 000 0000 (Placeholder)",
-    email: "adewumiblessingmary@example.com", // Placeholder
-    location: "Ogbomoso / Oyo State, Nigeria",
+    // Official WhatsApp phone number for Blessing Mary
+    whatsappNumber: "2348107144535", 
+    whatsappDisplay: "+234 810 714 4535",
+    email: "adewumiblessingmary@example.com",
+    location: "College of Health Sciences, LAUTECH, Ogbomoso, Oyo State, Nigeria",
     shareTitle: "Beautiful in His Time — Adewumi Blessing Mary's Nursing Induction",
-    shareText: "Join me in celebrating God's faithfulness as I prepare for my Nursing Induction Ceremony in November 2026!",
-    shareUrl: window.location.href
+    shareText: "Join me in celebrating God's faithfulness as I prepare for my Nursing Induction Ceremony at LAUTECH in November 2026!",
+    shareUrl: typeof window !== "undefined" ? window.location.href : ""
   },
 
   // ------------------------------------------------------------------
@@ -87,7 +86,79 @@ const SITE_DATA = {
   },
 
   // ------------------------------------------------------------------
-  // 5. PERSONAL STORY NARRATIVE & MILESTONES
+  // 5. PHOTO SPEAKS SECTION (4 Featured Photographs with Captions)
+  // Edit the caption strings below when Blessing's actual stories/captions are supplied.
+  // ------------------------------------------------------------------
+  photoSpeaks: [
+    {
+      id: "speaks-1",
+      tag: "Clinical Postings",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Clinical ward duties and learning rounds",
+      caption: "Clinical Ward Postings – First clinical rounds, bedside vitals, and learning patient advocacy at LAUTECH Teaching Hospital."
+    },
+    {
+      id: "speaks-2",
+      tag: "Diagnostic Skills",
+      image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Stethoscope examination and diagnostic equipment",
+      caption: "Hands-on Clinical Diagnostics – Mastering vital diagnostic assessments and patient care techniques with diligence."
+    },
+    {
+      id: "speaks-3",
+      tag: "Midwifery Care",
+      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Compassionate nursing and maternal healthcare",
+      caption: "Midwifery & Maternal Health Posting – Nurturing mothers and newborns with empathy, prayer, and professional care."
+    },
+    {
+      id: "speaks-4",
+      tag: "Academic Triumph",
+      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Academic celebration and graduation joy",
+      caption: "Class of 2026 Milestones – Celebrating years of perseverance, shared sisterhood, and God's unwavering faithfulness."
+    }
+  ],
+
+  // ------------------------------------------------------------------
+  // 6. MOMENTS ALONG THE WAY (Additional Photo Gallery - Without Captions)
+  // Displayed as a clean responsive image gallery without text.
+  // ------------------------------------------------------------------
+  momentsGallery: [
+    {
+      id: "gallery-1",
+      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Hospital ward and clinical learning environment"
+    },
+    {
+      id: "gallery-2",
+      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Healthcare practice and patient advocacy"
+    },
+    {
+      id: "gallery-3",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Clinical collaboration and ward practice"
+    },
+    {
+      id: "gallery-4",
+      image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Medical laboratory diagnostic sessions"
+    },
+    {
+      id: "gallery-5",
+      image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Compassionate bedside nursing care"
+    },
+    {
+      id: "gallery-6",
+      image: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Dedicated nursing duty and night shift devotion"
+    }
+  ],
+
+  // ------------------------------------------------------------------
+  // 7. PERSONAL STORY NARRATIVE & MILESTONES
   // ------------------------------------------------------------------
   story: {
     heading: "A Journey of Faith, Resilience and Purpose",
@@ -127,111 +198,98 @@ const SITE_DATA = {
   },
 
   // ------------------------------------------------------------------
-  // 6. WISHLIST ITEMS
-  // Note: Only item #8 has a specified price (₦35,000).
-  // No prices are invented for the other items.
+  // 8. SUPPORT ITEMS (13 Items - Dedicated Support Page: support.html)
+  // Each card displays ONLY:
+  // - Item image
+  // - Item name
+  // - "Support with this Item" button (WhatsApp link)
+  // No prices, descriptions, specs, or badges are displayed.
   // ------------------------------------------------------------------
-  wishlist: [
+  supportItems: [
     {
-      id: "item-1",
-      category: "attire",
-      categoryLabel: "Ceremony & Attire",
+      id: "support-1",
       name: "Black Heel Shoes",
-      specs: "Size: 41",
-      description: "Elegant black heeled shoes tailored for the induction ceremony, graduation procession, and professional ceremonies.",
-      price: null,
-      priceBadge: "Size: 41",
-      image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Pair of elegant black heeled shoes"
+      // Elegant, completely black women's heel shoe
+      image: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Pair of elegant black women's heel shoes"
     },
     {
-      id: "item-2",
-      category: "attire",
-      categoryLabel: "Ceremony & Attire",
+      id: "support-2",
       name: "Shoulder-Length Straight Wig",
-      specs: "Sleek shoulder-length straight hair",
-      description: "A refined, premium shoulder-length straight wig to complement the induction gown and formal photography styling.",
-      price: null,
-      priceBadge: "Ceremony Styling",
       image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Sleek straight hair styling"
+      imageAlt: "Sleek straight hair wig"
     },
     {
-      id: "item-3",
-      category: "clinical",
-      categoryLabel: "Clinical Essentials",
+      id: "support-3",
       name: "Emerald Green Nursing Scrubs",
-      specs: "Personalised: Adewumi B.M",
-      description: "High-grade hospital scrub suit in elegant emerald green, custom-embroidered with the official name: Adewumi B.M.",
-      price: null,
-      priceBadge: "Personalised Scrub",
       image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Professional medical nursing scrubs"
+      imageAlt: "Professional emerald green nursing scrubs"
     },
     {
-      id: "item-4",
-      category: "clinical",
-      categoryLabel: "Clinical Essentials",
-      name: "Medical Diagnostic Equipment",
-      specs: "Stethoscope & Sphygmomanometer",
-      description: "Clinical-grade diagnostic tools essential for accurate patient assessments, blood pressure monitoring, and ward practice.",
-      price: null,
-      priceBadge: "Clinical Set",
+      id: "support-4",
+      name: "Stethoscope and Sphygmomanometer",
       image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Clinical stethoscope and diagnostic equipment"
+      imageAlt: "Clinical stethoscope and sphygmomanometer blood pressure kit"
     },
     {
-      id: "item-5",
-      category: "clinical",
-      categoryLabel: "Clinical Essentials",
-      name: "Supportive Ward Sneakers",
-      specs: "Size: 41 (Suitable for scrubs)",
-      description: "Lightweight, shock-absorbing, and all-day supportive sneakers designed specifically for active hospital ward shifts.",
-      price: null,
-      priceBadge: "Size: 41",
+      id: "support-5",
+      name: "Ward Sneakers",
       image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Comfortable athletic sneakers suitable for scrubs"
+      imageAlt: "Supportive ward sneakers for clinical duties"
     },
     {
-      id: "item-6",
-      category: "attire",
-      categoryLabel: "Ceremony & Attire",
+      id: "support-6",
       name: "Ready-to-Wear Gown",
-      specs: "Dress Size: 12",
-      description: "A tastefully tailored, modest, and celebratory ready-to-wear gown for the post-induction reception and thanksgiving banquet.",
-      price: null,
-      priceBadge: "Dress Size: 12",
-      image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Elegant formal ready to wear celebration gown"
+      // Modest, decent and sophisticated women's formal gown
+      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Elegant modest ready-to-wear gown for celebration"
     },
     {
-      id: "item-7",
-      category: "clinical",
-      categoryLabel: "Clinical Essentials",
+      id: "support-7",
       name: "Smart Wristwatch",
-      specs: "Pulse & timer function",
-      description: "A precision smart digital timepiece indispensable for pulse checks, medication timing, and busy hospital clinical schedules.",
-      price: null,
-      priceBadge: "Clinical Utility",
       image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Modern sleek smart wristwatch"
+      imageAlt: "Smart wristwatch with timer and pulse tracking"
     },
     {
-      id: "item-8",
-      category: "keepsake",
-      categoryLabel: "Studio & Keepsakes",
-      name: "Studio Photography Session",
-      specs: "Estimated Cost: ₦35,000",
-      description: "A commemorative professional studio portrait session to preserve the joy, beauty, and memory of this milestone forever.",
-      price: "₦35,000",
-      priceBadge: "₦35,000 (Estimated)",
+      id: "support-8",
+      name: "Nursing Licence Fee",
+      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Professional nursing council licence and credential registration"
+    },
+    {
+      id: "support-9",
+      name: "Graduation Fee",
+      image: "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Academic graduation fee, gown and certificate processing"
+    },
+    {
+      id: "support-10",
+      name: "Send-Forth Project Fee",
+      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing class send-forth commemorative project"
+    },
+    {
+      id: "support-11",
+      name: "Photography",
       image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Professional camera in studio setting"
+      imageAlt: "Professional studio photoshoot session"
+    },
+    {
+      id: "support-12",
+      name: "Feeding",
+      image: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Celebration reception catering and banquet meal for guests"
+    },
+    {
+      id: "support-13",
+      name: "Jotter Souvenir",
+      image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Customised ceremony jotter souvenir and stationery"
     }
   ],
 
   // ------------------------------------------------------------------
-  // 7. APPRECIATION & SCRIPTURAL CLOSING
+  // 9. APPRECIATION & SCRIPTURAL CLOSING
   // ------------------------------------------------------------------
   appreciation: {
     heading: "Thank You for Being Part of My Journey",
@@ -240,6 +298,31 @@ const SITE_DATA = {
     name: "Adewumi Blessing Mary"
   }
 };
+
+/**
+ * Dynamically generates the WhatsApp message and URL for any support item
+ * Example output message:
+ * "Hello Blessing, I would love to support you with the Nursing Licence Fee. Please let me know how I can proceed."
+ */
+function generateWhatsAppSupportUrl(itemName) {
+  const waNumber = (typeof SITE_DATA !== "undefined" && SITE_DATA.contact) 
+    ? SITE_DATA.contact.whatsappNumber 
+    : "2348107144535";
+  
+  let itemPhrase;
+  const lower = itemName.trim().toLowerCase();
+  
+  if (lower.startsWith("the ")) {
+    itemPhrase = itemName.trim();
+  } else if (lower === "photography" || lower === "feeding") {
+    itemPhrase = itemName.trim();
+  } else {
+    itemPhrase = "the " + itemName.trim();
+  }
+
+  const message = `Hello Blessing, I would love to support you with ${itemPhrase}. Please let me know how I can proceed.`;
+  return `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+}
 
 /**
  * Global Fallback Handler for Images
@@ -271,5 +354,6 @@ function handleImgFallback(imgElement, label) {
 // Ensure global accessibility in all browser contexts
 if (typeof window !== "undefined") {
   window.SITE_DATA = SITE_DATA;
+  window.generateWhatsAppSupportUrl = generateWhatsAppSupportUrl;
+  window.handleImgFallback = handleImgFallback;
 }
-

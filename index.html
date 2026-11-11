@@ -64,18 +64,18 @@
             <a class="nav-link nav-link-custom" href="#story">My Story</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#induction">The Induction</a>
+            <a class="nav-link nav-link-custom" href="#photospeaks">Photo Speaks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#wishlist">Wishlist</a>
+            <a class="nav-link nav-link-custom" href="#induction">The Induction</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-link-custom" href="#contact">Contact</a>
           </li>
           <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-            <a class="btn btn-accent-gold" href="#wishlist">
-              <i class="bi bi-gift-fill me-1"></i>
-              <span>View Wishlist</span>
+            <a class="btn btn-accent-gold" href="#induction">
+              <i class="bi bi-calendar-event-fill me-1"></i>
+              <span>The Ceremony</span>
             </a>
           </li>
         </ul>
@@ -128,9 +128,9 @@
               <span>Discover My Journey</span>
               <i class="bi bi-arrow-right"></i>
             </a>
-            <a href="#wishlist" class="btn btn-outline-gold">
-              <i class="bi bi-gift"></i>
-              <span>View My Wishlist</span>
+            <a href="#photospeaks" class="btn btn-outline-gold">
+              <i class="bi bi-camera-fill me-1"></i>
+              <span>Photo Speaks</span>
             </a>
           </div>
         </div>
@@ -331,6 +331,234 @@
   </section>
 
   <!-- ====================================================================
+       3B. PHOTO SPEAKS SECTION (4 Featured Photographs with Captions)
+       ==================================================================== -->
+  <section id="photospeaks" class="photo-speaks-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">
+          <i class="bi bi-camera-reels-fill"></i>
+          <span>Journey in Frames</span>
+        </div>
+        <h2 class="section-title">Photo Speaks</h2>
+        <div class="section-divider">
+          <span class="line"></span>
+          <i class="bi bi-camera-fill text-gold"></i>
+          <span class="line"></span>
+        </div>
+        <p class="section-subtitle">
+          Glimpses into clinical postings, ward training, laboratory work, and moments of grace along the path to induction.
+        </p>
+      </div>
+
+      <!-- 4 Selected Photos with Short Captions -->
+      <div class="row g-4">
+        <!-- Photo 1 -->
+        <div class="col-md-6 col-lg-3 reveal-on-scroll">
+          <div class="photo-speaks-card">
+            <div class="photo-speaks-img-box">
+              <span class="photo-speaks-tag">Clinical Practice</span>
+              <!-- EDITABLE: Replace src with Blessing's photo -->
+              <img 
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" 
+                alt="Clinical ward postings and hospital rounds" 
+                class="photo-speaks-img"
+                loading="lazy"
+                onerror="handleImgFallback(this, 'Clinical Practice')"
+              />
+            </div>
+            <div class="photo-speaks-body">
+              <!-- EDITABLE CAPTION: Update caption text below -->
+              <p class="photo-speaks-caption">
+                Clinical Ward Postings – First clinical rounds, bedside vitals, and learning patient advocacy at LAUTECH Teaching Hospital.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="col-md-6 col-lg-3 reveal-on-scroll delay-1">
+          <div class="photo-speaks-card">
+            <div class="photo-speaks-img-box">
+              <span class="photo-speaks-tag">Diagnostics</span>
+              <!-- EDITABLE: Replace src with Blessing's photo -->
+              <img 
+                src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" 
+                alt="Stethoscope and clinical diagnostics" 
+                class="photo-speaks-img"
+                loading="lazy"
+                onerror="handleImgFallback(this, 'Diagnostics')"
+              />
+            </div>
+            <div class="photo-speaks-body">
+              <!-- EDITABLE CAPTION: Update caption text below -->
+              <p class="photo-speaks-caption">
+                Hands-on Diagnostics – Mastering vital diagnostic assessments, blood pressure monitoring, and bedside patient care skills.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="col-md-6 col-lg-3 reveal-on-scroll delay-2">
+          <div class="photo-speaks-card">
+            <div class="photo-speaks-img-box">
+              <span class="photo-speaks-tag">Midwifery Care</span>
+              <!-- EDITABLE: Replace src with Blessing's photo -->
+              <img 
+                src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80" 
+                alt="Midwifery and compassionate healthcare" 
+                class="photo-speaks-img"
+                loading="lazy"
+                onerror="handleImgFallback(this, 'Midwifery Care')"
+              />
+            </div>
+            <div class="photo-speaks-body">
+              <!-- EDITABLE CAPTION: Update caption text below -->
+              <p class="photo-speaks-caption">
+                Midwifery & Maternal Health Posting – Nurturing mothers and newborns with empathy, prayer, and professional care.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="col-md-6 col-lg-3 reveal-on-scroll delay-3">
+          <div class="photo-speaks-card">
+            <div class="photo-speaks-img-box">
+              <span class="photo-speaks-tag">Class of 2026</span>
+              <!-- EDITABLE: Replace src with Blessing's photo -->
+              <img 
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" 
+                alt="Academic milestone and achievement" 
+                class="photo-speaks-img"
+                loading="lazy"
+                onerror="handleImgFallback(this, 'Class of 2026')"
+              />
+            </div>
+            <div class="photo-speaks-body">
+              <!-- EDITABLE CAPTION: Update caption text below -->
+              <p class="photo-speaks-caption">
+                Class of 2026 Milestones – Celebrating years of perseverance, shared sisterhood, and God's unwavering faithfulness.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       3C. MOMENTS ALONG THE WAY (Additional Photo Gallery - Without Captions)
+       ==================================================================== -->
+  <section id="gallery" class="moments-gallery-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">
+          <i class="bi bi-images"></i>
+          <span>Nursing Journey Photo Gallery</span>
+        </div>
+        <h2 class="section-title">Moments Along the Way</h2>
+        <div class="section-divider">
+          <span class="line"></span>
+          <i class="bi bi-heart-pulse-fill text-gold"></i>
+          <span class="line"></span>
+        </div>
+        <p class="section-subtitle">
+          Candid memories, clinical postings, and milestones captured throughout the journey into nursing science.
+        </p>
+      </div>
+
+      <!-- Gallery Grid without Captions -->
+      <div class="row g-4">
+        <!-- Gallery Photo 1 -->
+        <div class="col-6 col-md-4 reveal-on-scroll">
+          <div class="moments-gallery-item">
+            <!-- EDITABLE: Replace src with Blessing's photo -->
+            <img 
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" 
+              alt="Hospital ward and clinical learning environment" 
+              class="moments-gallery-img"
+              loading="lazy"
+              onerror="handleImgFallback(this, 'Hospital Setting')"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Photo 2 -->
+        <div class="col-6 col-md-4 reveal-on-scroll delay-1">
+          <div class="moments-gallery-item">
+            <!-- EDITABLE: Replace src with Blessing's photo -->
+            <img 
+              src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" 
+              alt="Healthcare practice and patient advocacy" 
+              class="moments-gallery-img"
+              loading="lazy"
+              onerror="handleImgFallback(this, 'Healthcare Practice')"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Photo 3 -->
+        <div class="col-6 col-md-4 reveal-on-scroll delay-2">
+          <div class="moments-gallery-item">
+            <!-- EDITABLE: Replace src with Blessing's photo -->
+            <img 
+              src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80" 
+              alt="Clinical collaboration and ward practice" 
+              class="moments-gallery-img"
+              loading="lazy"
+              onerror="handleImgFallback(this, 'Clinical Duties')"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Photo 4 -->
+        <div class="col-6 col-md-4 reveal-on-scroll">
+          <div class="moments-gallery-item">
+            <!-- EDITABLE: Replace src with Blessing's photo -->
+            <img 
+              src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80" 
+              alt="Medical laboratory diagnostic sessions" 
+              class="moments-gallery-img"
+              loading="lazy"
+              onerror="handleImgFallback(this, 'Diagnostic Labs')"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Photo 5 -->
+        <div class="col-6 col-md-4 reveal-on-scroll delay-1">
+          <div class="moments-gallery-item">
+            <!-- EDITABLE: Replace src with Blessing's photo -->
+            <img 
+              src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80" 
+              alt="Compassionate bedside nursing care" 
+              class="moments-gallery-img"
+              loading="lazy"
+              onerror="handleImgFallback(this, 'Patient Care')"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Photo 6 -->
+        <div class="col-6 col-md-4 reveal-on-scroll delay-2">
+          <div class="moments-gallery-item">
+            <!-- EDITABLE: Replace src with Blessing's photo -->
+            <img 
+              src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80" 
+              alt="Dedicated nursing duty and night shift devotion" 
+              class="moments-gallery-img"
+              loading="lazy"
+              onerror="handleImgFallback(this, 'Ward Postings')"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
        4. INDUCTION DETAILS SECTION
        ==================================================================== -->
   <section id="induction" class="induction-section">
@@ -468,11 +696,11 @@
   </section>
 
   <!-- ====================================================================
-       5. WISHLIST SECTION
-       ==================================================================== -->
+       5. WISHLIST SECTION (COMMENTED OUT AS PER INSTRUCTION - PRESERVED FOR REFERENCE)
+       Wishlist and support items are hosted on the separate support page (support.html)
+  ====================================================================
   <section id="wishlist" class="wishlist-section">
     <div class="container">
-      <!-- Section Header -->
       <div class="section-header text-center">
         <div class="section-tag">
           <i class="bi bi-gift-fill"></i>
@@ -489,7 +717,6 @@
         </p>
       </div>
 
-      <!-- Filter Buttons -->
       <div class="wishlist-filter-wrapper">
         <button type="button" class="filter-btn active" data-category="all">
           <i class="bi bi-grid-fill me-1"></i> All Items (8)
@@ -505,12 +732,9 @@
         </button>
       </div>
 
-      <!-- Dynamic Wishlist Cards Grid -->
       <div id="wishlist-grid" class="row">
-        <!-- Injected via JavaScript from SITE_DATA.wishlist -->
       </div>
 
-      <!-- General Blessing / Financial Gift Note -->
       <div class="general-support-card reveal-on-scroll">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-8">
@@ -519,7 +743,7 @@
               If you wish to bless Blessing with a financial token of love, prayers, or a tailored gift beyond the items listed, please connect directly via WhatsApp. Your support is deeply treasured!
             </p>
             <a 
-              href="https://wa.me/2348000000000?text=Hello%20Blessing%2C%20I%20would%20love%20to%20send%20a%20support%20token%20and%20congratulations%20for%20your%20nursing%20induction!" 
+              href="https://wa.me/2348107144535?text=Hello%20Blessing%2C%20I%20would%20love%20to%20send%20a%20support%20token%20and%20congratulations%20for%20your%20nursing%20induction!" 
               target="_blank" 
               rel="noopener noreferrer" 
               class="btn btn-primary-blue"
@@ -532,6 +756,7 @@
       </div>
     </div>
   </section>
+  ==================================================================== -->
 
   <!-- ====================================================================
        6. APPRECIATION SECTION
@@ -591,7 +816,7 @@
             <h3 class="contact-card-title">WhatsApp Chat</h3>
             <p class="contact-card-detail">Send an instant prayer, enquiry, or direct congratulatory note.</p>
             <a 
-              href="https://wa.me/2348000000000?text=Hello%20Blessing,%20huge%20congratulations%20on%20your%20nursing%20induction%20milestone!" 
+              href="https://wa.me/2348107144535?text=Hello%20Blessing,%20huge%20congratulations%20on%20your%20nursing%20induction%20milestone!" 
               target="_blank" 
               rel="noopener noreferrer" 
               class="btn btn-outline-blue w-100"
@@ -696,8 +921,8 @@
       <ul class="footer-nav list-unstyled">
         <li><a href="#home">Home</a></li>
         <li><a href="#story">My Story</a></li>
+        <li><a href="#photospeaks">Photo Speaks</a></li>
         <li><a href="#induction">The Induction</a></li>
-        <li><a href="#wishlist">Wishlist</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -722,8 +947,8 @@
   </button>
 
   <!-- ====================================================================
-       SUPPORT MODAL
-       ==================================================================== -->
+       SUPPORT MODAL (COMMENTED OUT - PRESERVED FOR REFERENCE)
+       ====================================================================
   <div class="modal fade modal-custom" id="supportModal" tabindex="-1" aria-labelledby="modalItemTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -760,6 +985,7 @@
       </div>
     </div>
   </div>
+  ==================================================================== -->
 
   <!-- Global Toast Notification Element -->
   <div id="globalToast" class="custom-toast" role="alert" aria-live="polite">

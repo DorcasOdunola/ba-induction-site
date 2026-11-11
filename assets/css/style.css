@@ -774,6 +774,247 @@ img {
 }
 
 /* --------------------------------------------------------------------
+   6B. PHOTO SPEAKS & MOMENTS ALONG THE WAY GALLERIES
+   -------------------------------------------------------------------- */
+.photo-speaks-section {
+  padding: 6rem 0;
+  background-color: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.photo-speaks-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-speaks-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.photo-speaks-img-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background-color: var(--color-blue-dark);
+}
+
+.photo-speaks-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.photo-speaks-card:hover .photo-speaks-img {
+  transform: scale(1.05);
+}
+
+.photo-speaks-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(23, 59, 112, 0.88);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid rgba(209, 173, 97, 0.45);
+  z-index: 2;
+}
+
+.photo-speaks-body {
+  padding: 1.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(209, 173, 97, 0.2);
+}
+
+.photo-speaks-caption {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3B4654;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Moments Along The Way Gallery (Without Captions) */
+.moments-gallery-section {
+  padding: 6rem 0;
+  background-color: #FFFFFF;
+}
+
+.moments-gallery-item {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  aspect-ratio: 4 / 3;
+  position: relative;
+  background-color: var(--color-bg-subtle);
+  transition: var(--transition-smooth);
+}
+
+.moments-gallery-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.moments-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.moments-gallery-item:hover .moments-gallery-img {
+  transform: scale(1.06);
+}
+
+/* --------------------------------------------------------------------
+   6C. DEDICATED SUPPORT PAGE STYLES (support.html)
+   -------------------------------------------------------------------- */
+.support-page-hero {
+  padding: 7rem 0 3.5rem;
+  background: radial-gradient(circle at 10% 20%, rgba(209, 173, 97, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(23, 59, 112, 0.05) 0%, transparent 40%),
+              #FFFFFF;
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.support-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-blue);
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  padding: 0.45rem 1.15rem;
+  border-radius: 50px;
+  margin-bottom: 1.75rem;
+  transition: var(--transition-base);
+}
+
+.support-back-link:hover {
+  background-color: var(--color-gold-light);
+  border-color: var(--color-gold);
+  color: var(--color-blue-dark);
+  transform: translateX(-3px);
+}
+
+.support-grid-section {
+  padding: 5rem 0 6rem;
+  background-color: #FFFFFF;
+}
+
+/* Simplified Support Card (Only Image, Title, and WhatsApp Button) */
+.support-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.support-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.support-card-img-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-bg-subtle);
+}
+
+.support-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.support-card:hover .support-card-img {
+  transform: scale(1.05);
+}
+
+.support-card-body {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.support-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--color-blue);
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  min-height: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-btn-wa {
+  background-color: var(--color-blue);
+  color: #FFFFFF;
+  border: 1.5px solid var(--color-blue);
+  border-radius: 50px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition-base);
+  text-decoration: none;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(23, 59, 112, 0.15);
+}
+
+.support-btn-wa:hover {
+  background-color: var(--color-blue-hover);
+  color: #FFFFFF;
+  border-color: var(--color-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(23, 59, 112, 0.25);
+}
+
+/* --------------------------------------------------------------------
    7. INDUCTION DETAILS SECTION
    -------------------------------------------------------------------- */
 .induction-section {

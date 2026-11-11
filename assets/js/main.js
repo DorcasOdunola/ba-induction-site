@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   renderWishlistItems("all");
   initWishlistFilters();
+  renderSupportItems();
   initCountdownTimer();
   initScrollAnimations();
   initBackToTop();
@@ -21,8 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initCongratulationsForm();
 });
 
-// Expose openSupportModal to global window for inline onclick handlers
+// Expose openSupportModal and renderSupportItems to global window
 window.openSupportModal = openSupportModal;
+window.renderSupportItems = renderSupportItems;
 
 /**
  * Synchronize static WhatsApp links and email links from SITE_DATA
@@ -32,9 +34,12 @@ function syncContactLinks() {
   if (!data || !data.contact) return;
 
   const waNumber = data.contact.whatsappNumber;
-  const generalWaBtns = document.querySelectorAll('a[href*="wa.me/2348000000000"]');
+  const generalWaBtns = document.querySelectorAll('a[href*="wa.me/"]');
   generalWaBtns.forEach(btn => {
-    btn.href = btn.href.replace("2348000000000", waNumber);
+    // If the link has placeholder 2348000000000, update it to the active number
+    if (btn.href.includes("2348000000000")) {
+      btn.href = btn.href.replace("2348000000000", waNumber);
+    }
   });
 
   const emailLinks = document.querySelectorAll('a[href*="adewumiblessingmary@example.com"]');
@@ -42,6 +47,68 @@ function syncContactLinks() {
     link.href = link.href.replace("adewumiblessingmary@example.com", data.contact.email);
   });
 }
+
+/**
+ * Render the 13 Simplified Support Cards on support.html
+ * Contains ONLY: Image, Name, and WhatsApp "Support with this Item" button
+ */
+function renderSupportItems() {
+  const container = document.getElementById("support-grid");
+  if (!container) return;
+
+  const data = typeof SITE_DATA !== "undefined" ? SITE_DATA : window.SITE_DATA;
+  const items = (data && data.supportItems) ? data.supportItems : [];
+
+  if (items.length === 0) {
+    container.innerHTML = `
+      <div class="col-12 text-center py-5">
+        <p class="text-muted">No support items listed at this time.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = items.map((item, index) => {
+    const waUrl = (typeof generateWhatsAppSupportUrl === "function") 
+      ? generateWhatsAppSupportUrl(item.name) 
+      : `https://wa.me/2348107144535?text=${encodeURIComponent("Hello Blessing, I would love to support you with " + item.name + ". Please let me know how I can proceed.")}`;
+    
+    const delayClass = (index % 4 !== 0) ? ` delay-${index % 4}` : "";
+
+    return `
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 reveal-on-scroll${delayClass}">
+        <div class="support-card">
+          <div class="support-card-img-box">
+            <img 
+              src="${item.image}" 
+              alt="${escapeHtml(item.imageAlt || item.name)}" 
+              class="support-card-img"
+              loading="lazy"
+              onerror="handleImgFallback(this, '${escapeHtml(item.name)}')"
+            />
+          </div>
+          <div class="support-card-body">
+            <h3 class="support-card-title">${escapeHtml(item.name)}</h3>
+            <a 
+              href="${waUrl}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="support-btn-wa"
+              aria-label="Support with ${escapeHtml(item.name)} on WhatsApp"
+            >
+              <i class="bi bi-whatsapp text-gold"></i>
+              <span>Support with this Item</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  // Re-observe newly injected elements for scroll animations
+  initScrollAnimations();
+}
+
 
 
 /* --------------------------------------------------------------------
