@@ -804,7 +804,7 @@ img {
 .photo-speaks-img-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background-color: var(--color-blue-dark);
 }
@@ -812,12 +812,11 @@ img {
 .photo-speaks-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: var(--transition-smooth);
-}
-
-.photo-speaks-card:hover .photo-speaks-img {
-  transform: scale(1.05);
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 .photo-speaks-tag {
@@ -852,6 +851,12 @@ img {
   color: #3B4654;
   margin: 0;
   font-style: italic;
+}
+
+.moments-carousel-img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 /* Moments Along The Way Carousel */

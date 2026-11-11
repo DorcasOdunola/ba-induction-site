@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Safe initialization of each module
   try { syncContactLinks(); } catch (e) { console.error("syncContactLinks error:", e); }
   try { initNavbar(); } catch (e) { console.error("initNavbar error:", e); }
+  try { initPhotoProtection(); } catch (e) { console.error("initPhotoProtection error:", e); }
   try { renderSupportItems(); } catch (e) { console.error("renderSupportItems error:", e); }
   try { initMomentsCarousel(); } catch (e) { console.error("initMomentsCarousel error:", e); }
   try { renderWishlistItems("all"); } catch (e) { console.error("renderWishlistItems error:", e); }
@@ -25,6 +26,42 @@ document.addEventListener("DOMContentLoaded", () => {
 window.openSupportModal = openSupportModal;
 window.renderSupportItems = renderSupportItems;
 window.initMomentsCarousel = initMomentsCarousel;
+
+/**
+ * Discourage casual saving of personal gallery photos in the browser.
+ */
+function initPhotoProtection() {
+  const protectedPhotos = ".photo-speaks-img, .moments-carousel-img";
+  let hoveredPhoto = null;
+
+  document.addEventListener("contextmenu", event => {
+    if (event.target instanceof Element && event.target.closest(protectedPhotos)) {
+      event.preventDefault();
+    }
+  });
+
+  document.addEventListener("dragstart", event => {
+    if (event.target instanceof Element && event.target.closest(protectedPhotos)) {
+      event.preventDefault();
+    }
+  });
+
+  document.addEventListener("pointermove", event => {
+    hoveredPhoto = event.target instanceof Element
+      ? event.target.closest(protectedPhotos)
+      : null;
+  });
+
+  document.addEventListener("keydown", event => {
+    if (
+      hoveredPhoto &&
+      (event.ctrlKey || event.metaKey) &&
+      event.key.toLowerCase() === "s"
+    ) {
+      event.preventDefault();
+    }
+  });
+}
 
 /**
  * Synchronize static WhatsApp links from SITE_DATA
@@ -187,6 +224,7 @@ function initMomentsCarousel() {
           alt="${escapeHtml(item.imageAlt || 'Nursing journey memory ' + (idx + 1))}" 
           class="moments-carousel-img"
           loading="lazy"
+          draggable="false"
           onerror="handleImgFallback(this, 'Journey Memory ${idx + 1}')"
         />
       </div>
