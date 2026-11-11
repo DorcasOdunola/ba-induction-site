@@ -854,13 +854,56 @@ img {
   font-style: italic;
 }
 
-/* Moments Along The Way Gallery (Without Captions) */
+/* Moments Along The Way Carousel */
 .moments-gallery-section {
   padding: 6rem 0;
   background-color: #FFFFFF;
 }
 
-.moments-gallery-item {
+.moments-carousel-wrapper {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.moments-carousel-viewport {
+  overflow: hidden;
+  border-radius: 20px;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  padding: 0.5rem 0;
+}
+
+.moments-carousel-viewport:active {
+  cursor: grabbing;
+}
+
+.moments-carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  gap: 1.5rem;
+}
+
+.moments-carousel-slide {
+  flex: 0 0 calc((100% - 3rem) / 3); /* 3 cards visible on desktop */
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991.98px) {
+  .moments-carousel-slide {
+    flex: 0 0 calc((100% - 1.5rem) / 2); /* 2 cards visible on tablet */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .moments-carousel-slide {
+    flex: 0 0 88%; /* 1 card on mobile with preview of next slide */
+  }
+}
+
+.moments-carousel-card {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -871,21 +914,111 @@ img {
   transition: var(--transition-smooth);
 }
 
-.moments-gallery-item:hover {
-  transform: translateY(-5px);
+.moments-carousel-card:hover {
+  transform: translateY(-4px);
   border-color: var(--color-gold);
   box-shadow: var(--shadow-md);
 }
 
-.moments-gallery-img {
+.moments-carousel-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: var(--transition-smooth);
+  display: block;
 }
 
-.moments-gallery-item:hover .moments-gallery-img {
-  transform: scale(1.06);
+.moments-carousel-card:hover .moments-carousel-img {
+  transform: scale(1.05);
+}
+
+/* Carousel Navigation Arrows */
+.moments-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--color-border-gold);
+  color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 14px rgba(23, 59, 112, 0.15);
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition-base);
+}
+
+.moments-carousel-arrow:hover:not(:disabled) {
+  background-color: var(--color-gold);
+  color: var(--color-blue-dark);
+  border-color: var(--color-gold);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.moments-carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.moments-carousel-arrow.prev {
+  left: -18px;
+}
+
+.moments-carousel-arrow.next {
+  right: -18px;
+}
+
+@media (max-width: 767.98px) {
+  .moments-carousel-arrow.prev {
+    left: -6px;
+    width: 38px;
+    height: 38px;
+  }
+  .moments-carousel-arrow.next {
+    right: -6px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Carousel Dots */
+.moments-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+  max-width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.moments-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border-gold);
+  cursor: pointer;
+  transition: var(--transition-base);
+  padding: 0;
+}
+
+.moments-carousel-dot:hover {
+  background-color: var(--color-gold);
+}
+
+.moments-carousel-dot.active {
+  width: 28px;
+  border-radius: 50px;
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
 }
 
 /* --------------------------------------------------------------------
@@ -927,6 +1060,12 @@ img {
   background-color: #FFFFFF;
 }
 
+.support-grid-section .reveal-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
 /* Simplified Support Card (Only Image, Title, and WhatsApp Button) */
 .support-card {
   background: #FFFFFF;
@@ -939,6 +1078,8 @@ img {
   transition: var(--transition-smooth);
   box-shadow: var(--shadow-sm);
   position: relative;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .support-card:hover {
@@ -1078,6 +1219,23 @@ img {
   right: 18px;
   border-bottom: 2px solid var(--color-gold);
   border-right: 2px solid var(--color-gold);
+}
+
+.status-badge-confirmed {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
+  border: 1.5px solid var(--color-gold);
+  color: #FFFFFF;
+  padding: 0.55rem 1.4rem;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(23, 59, 112, 0.25);
 }
 
 .status-badge-unconfirmed {

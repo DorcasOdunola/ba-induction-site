@@ -3,9 +3,6 @@
  * BEAUTIFUL IN HIS TIME - NURSING INDUCTION CELEBRATION WEBSITE
  * Central Configuration & Content Data File
  * ====================================================================
- * 
- * Edit this file to update personal details, images, contact info,
- * event dates, photo gallery, and support items. Everything is dynamically rendered.
  */
 
 const SITE_DATA = {
@@ -33,31 +30,30 @@ const SITE_DATA = {
   },
 
   // ------------------------------------------------------------------
-  // 2. CONTACT & SUPPORT CONFIGURATION
+  // 2. CONTACT & SUPPORT CONFIGURATION (WhatsApp Only)
   // ------------------------------------------------------------------
   contact: {
     // Official WhatsApp phone number for Blessing Mary
     whatsappNumber: "2348107144535", 
     whatsappDisplay: "+234 810 714 4535",
-    email: "adewumiblessingmary@example.com",
+    whatsappIntroMessage: "Hello Blessing, I visited your Beautiful in His Time website and would love to connect with you.",
     location: "College of Health Sciences, LAUTECH, Ogbomoso, Oyo State, Nigeria",
     shareTitle: "Beautiful in His Time — Adewumi Blessing Mary's Nursing Induction",
-    shareText: "Join me in celebrating God's faithfulness as I prepare for my Nursing Induction Ceremony at LAUTECH in November 2026!",
-    shareUrl: typeof window !== "undefined" ? window.location.href : ""
+    shareText: "Join me in celebrating God's faithfulness as I prepare for my Nursing Induction Ceremony at LAUTECH on 25th November 2026!",
+    shareUrl: typeof window !== "undefined" && window.location ? window.location.href : ""
   },
 
   // ------------------------------------------------------------------
-  // 3. INDUCTION EVENT DETAILS
+  // 3. INDUCTION EVENT DETAILS (Confirmed: 25th November 2026)
   // ------------------------------------------------------------------
   event: {
     eventName: "Nursing Science Induction Ceremony",
     celebrantName: "Adewumi Blessing Mary",
-    // Current status: Date to be confirmed
-    isDateConfirmed: false,
-    dateBadgeText: "Date to be confirmed",
-    expectedWindow: "24th or 25th November 2026",
-    // Target date for countdown (tentatively set to 24 November 2026 09:00 AM)
-    targetCountdownDate: "2026-11-24T09:00:00",
+    isDateConfirmed: true,
+    confirmedDate: "25th November 2026",
+    dateBadgeText: "Confirmed Date: 25th November 2026",
+    // Countdown targets 25 November 2026 in local time (midnight start of day)
+    targetCountdownDate: "2026-11-25T00:00:00",
     venue: "College of Health Sciences, LAUTECH, Ogbomoso, Oyo State",
     venueShort: "LAUTECH College of Health Sciences, Ogbomoso",
     venueMapUrl: "https://www.google.com/maps/search/College+of+Health+Sciences+LAUTECH+Ogbomoso",
@@ -70,15 +66,10 @@ const SITE_DATA = {
 
   // ------------------------------------------------------------------
   // 4. PHOTOGRAPHY & PLACEHOLDER IMAGES
-  // Note: All images use high-quality royalty-free placeholders until
-  // Blessing's actual photographs are provided.
   // ------------------------------------------------------------------
   images: {
-    // Hero Section: Professional, elegant portrait placeholder
     heroPortrait: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80",
     heroPortraitAlt: "Placeholder portrait of an elegant young woman in professional attire",
-    
-    // Journey & Story collage placeholders
     journeyClinical: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
     journeyGraduation: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
     journeyHospital: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
@@ -86,23 +77,22 @@ const SITE_DATA = {
   },
 
   // ------------------------------------------------------------------
-  // 5. PHOTO SPEAKS SECTION (4 Featured Photographs with Captions)
-  // Edit the caption strings below when Blessing's actual stories/captions are supplied.
+  // 5. PHOTO SPEAKS SECTION (4 Selected Photographs with Captions)
   // ------------------------------------------------------------------
   photoSpeaks: [
     {
       id: "speaks-1",
-      tag: "Clinical Postings",
+      tag: "Clinical Practice",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Clinical ward duties and learning rounds",
       caption: "Clinical Ward Postings – First clinical rounds, bedside vitals, and learning patient advocacy at LAUTECH Teaching Hospital."
     },
     {
       id: "speaks-2",
-      tag: "Diagnostic Skills",
+      tag: "Diagnostics",
       image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Stethoscope examination and diagnostic equipment",
-      caption: "Hands-on Clinical Diagnostics – Mastering vital diagnostic assessments and patient care techniques with diligence."
+      caption: "Hands-on Diagnostics – Mastering vital diagnostic assessments, blood pressure monitoring, and bedside patient care skills."
     },
     {
       id: "speaks-3",
@@ -113,47 +103,131 @@ const SITE_DATA = {
     },
     {
       id: "speaks-4",
-      tag: "Academic Triumph",
+      tag: "Class of 2026",
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Academic celebration and graduation joy",
+      imageAlt: "Academic milestone and achievement",
       caption: "Class of 2026 Milestones – Celebrating years of perseverance, shared sisterhood, and God's unwavering faithfulness."
     }
   ],
 
   // ------------------------------------------------------------------
-  // 6. MOMENTS ALONG THE WAY (Additional Photo Gallery - Without Captions)
-  // Displayed as a clean responsive image gallery without text.
+  // 6. MOMENTS ALONG THE WAY (Carousel Photo Gallery - Without Captions)
+  // Accommodates additional photographs seamlessly.
   // ------------------------------------------------------------------
   momentsGallery: [
     {
-      id: "gallery-1",
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Hospital ward and clinical learning environment"
+      id: "moment-1",
+      image: "assets/images/first.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - clinical training"
     },
     {
-      id: "gallery-2",
-      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Healthcare practice and patient advocacy"
+      id: "moment-2",
+      image: "assets/images/second.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - hospital posting"
     },
     {
-      id: "gallery-3",
-      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Clinical collaboration and ward practice"
+      id: "moment-3",
+      image: "assets/images/third.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - clinical collaboration"
     },
     {
-      id: "gallery-4",
-      image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Medical laboratory diagnostic sessions"
+      id: "moment-4",
+      image: "assets/images/fourth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - laboratory sessions"
     },
     {
-      id: "gallery-5",
-      image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Compassionate bedside nursing care"
+      id: "moment-5",
+      image: "assets/images/fifth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - bedside care"
     },
     {
-      id: "gallery-6",
-      image: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Dedicated nursing duty and night shift devotion"
+      id: "moment-6",
+      image: "assets/images/sixth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - ward duty"
+    },
+    {
+      id: "moment-7",
+      image: "assets/images/seventh.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - clinical documentation"
+    },
+    {
+      id: "moment-8",
+      image: "assets/images/eight.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - clinical study"
+    },
+    {
+      id: "moment-9",
+      image: "assets/images/ninth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - nursing fellowship"
+    },
+    {
+      id: "moment-10",
+      image: "assets/images/tenth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - clinical rounds"
+    },
+    {
+      id: "moment-11",
+      image: "assets/images/eleventh.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - practical training"
+    },
+    {
+      id: "moment-12",
+      image: "assets/images/tweleth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - maternal health"
+    },
+    {
+      id: "moment-13",
+      image: "assets/images/thirteen.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - medical assessments"
+    },
+    {
+      id: "moment-14",
+      image: "assets/images/fourteenth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - patient care"
+    },
+    {
+      id: "moment-15",
+      image: "assets/images/fifteenth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - clinical environment"
+    },
+    {
+      id: "moment-16",
+      image: "assets/images/sixteen.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1584467735867-4297ae2ebcee?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - academic dedication"
+    },
+    {
+      id: "moment-17",
+      image: "assets/images/seventeenth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - healthcare community"
+    },
+    {
+      id: "moment-18",
+      image: "assets/images/eighteenth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - graduation countdown"
+    },
+    {
+      id: "moment-19",
+      image: "assets/images/nineteenth.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Nursing journey memory - milestone celebration"
     }
   ],
 
@@ -198,18 +272,17 @@ const SITE_DATA = {
   },
 
   // ------------------------------------------------------------------
-  // 8. SUPPORT ITEMS (13 Items - Dedicated Support Page: support.html)
+  // 8. 13 SUPPORT ITEMS (support.html)
   // Each card displays ONLY:
   // - Item image
   // - Item name
   // - "Support with this Item" button (WhatsApp link)
-  // No prices, descriptions, specs, or badges are displayed.
+  // No prices, descriptions, specs, or badges.
   // ------------------------------------------------------------------
   supportItems: [
     {
       id: "support-1",
       name: "Black Heel Shoes",
-      // Elegant, completely black women's heel shoe
       image: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Pair of elegant black women's heel shoes"
     },
@@ -240,7 +313,6 @@ const SITE_DATA = {
     {
       id: "support-6",
       name: "Ready-to-Wear Gown",
-      // Modest, decent and sophisticated women's formal gown
       image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Elegant modest ready-to-wear gown for celebration"
     },
@@ -301,7 +373,7 @@ const SITE_DATA = {
 
 /**
  * Dynamically generates the WhatsApp message and URL for any support item
- * Example output message:
+ * Example:
  * "Hello Blessing, I would love to support you with the Nursing Licence Fee. Please let me know how I can proceed."
  */
 function generateWhatsAppSupportUrl(itemName) {
@@ -329,7 +401,7 @@ function generateWhatsAppSupportUrl(itemName) {
  * Generates an elegant SVG data-URI if an image link fails or is offline
  */
 function handleImgFallback(imgElement, label) {
-  imgElement.onerror = null; // Prevent infinite loop
+  imgElement.onerror = null;
   const width = imgElement.getAttribute("width") || 600;
   const height = imgElement.getAttribute("height") || 400;
   const text = label ? label.replace(/["']/g, '') : "Milestone Image";
@@ -356,4 +428,8 @@ if (typeof window !== "undefined") {
   window.SITE_DATA = SITE_DATA;
   window.generateWhatsAppSupportUrl = generateWhatsAppSupportUrl;
   window.handleImgFallback = handleImgFallback;
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { SITE_DATA, generateWhatsAppSupportUrl, handleImgFallback };
 }

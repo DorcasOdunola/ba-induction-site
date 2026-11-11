@@ -86,17 +86,18 @@ This is the public-facing celebration page. It shares Blessing's inspiring testi
    - Each photo has an image presentation with a short caption directly underneath.
    - Clearly identified editable placeholder captions ready for Blessing's actual memories.
 
-6. **Moments Along the Way (Nursing Journey Photo Gallery)**
-   - Displays **6 additional photographs** from her nursing journey.
-   - Displayed **without captions** in a responsive, uniform gallery grid with subtle hover zoom effects.
+6. **Moments Along the Way (Interactive Carousel Photo Gallery)**
+   - Converted into a smooth, responsive **carousel slider** without captions.
+   - Shows 3 photographs simultaneously on desktop, 2 on tablet, and 1 card with peek on mobile.
+   - Equipped with previous/next navigation buttons, dynamic pagination indicator dots, and full touch swipe / mouse drag gestures.
+   - Dynamically populated from `SITE_DATA.momentsGallery` in `data.js` (currently 8 curated photos, easily expandable) with automatic SVG fallback.
 
 7. **Induction Details Section**
    - Formal event invitation card with classic corner ornaments.
-   - Pulsating **"Date to be confirmed"** indicator badge.
-   - Expected date window: *24th or 25th November 2026*.
+   - **Confirmed Date:** **25th November 2026**.
    - Venue: *College of Health Sciences, LAUTECH, Ogbomoso, Oyo State*.
-   - Functional Countdown Timer ticking down toward the anticipated November 2026 ceremony.
-   - *"Add Reminder to Calendar"* (Google Calendar integration).
+   - Functional Countdown Timer ticking down toward the confirmed ceremony date (25th November 2026).
+   - *"Add Reminder to Calendar"* (Google Calendar integration configured for 25th November 2026).
    - *"View Venue on Map"* (Google Maps location link).
    - *"Copy Event Details"* with instant toast notification.
 
@@ -107,11 +108,14 @@ This is the public-facing celebration page. It shares Blessing's inspiring testi
 9. **Appreciation Section**
    - Warm thank-you message to family, mentors, church community, and well-wishers.
 
-10. **Contact & Greetings Section**
-    - Direct WhatsApp contact button (+2348107144535).
-    - Venue location and email inquiry cards.
-    - Quick "Send a Congratulatory Prayer" box that formats and sends well-wishes straight to WhatsApp.
+10. **Connect & Share Section (WhatsApp Only)**
+    - All inquiries and contacts direct strictly to WhatsApp.
+    - Direct WhatsApp contact button (+2348107144535) preloaded with:
+      > *"Hello Blessing, I visited your Beautiful in His Time website and would love to connect with you."*
+    - Venue location card for LAUTECH College of Health Sciences.
+    - Quick "Send a Congratulatory Prayer" box that formats and sends heartfelt prayers straight to WhatsApp.
     - Website sharing button via native **Web Share API** with clipboard fallback.
+    - **All email addresses, icons, and mailto links have been completely removed.**
 
 11. **Footer**
     - Professional closing statement, copyright 2026, and Back-to-Top floating button.

@@ -17,12 +17,7 @@ This folder and the `assets/js/data.js` file manage the photography used across 
 | **Photo Speaks 2** | Diagnostic examinations & clinical tools | Unsplash (`photo-1584515979956-d9f6e5d09982`) |
 | **Photo Speaks 3** | Midwifery & maternal care | Unsplash (`photo-1584515933487-779824d29309`) |
 | **Photo Speaks 4** | Class of 2026 graduation celebration | Unsplash (`photo-1523240795612-9a054b0db644`) |
-| **Moments Gallery 1** | Hospital ward environment | Unsplash (`photo-1519494026892-80bbd2d6fd0d`) |
-| **Moments Gallery 2** | Healthcare clinical practice | Unsplash (`photo-1505751172876-fa1923c5c528`) |
-| **Moments Gallery 3** | Ward rounds & collaboration | Unsplash (`photo-1582750433449-648ed127bb54`) |
-| **Moments Gallery 4** | Medical laboratory diagnostics | Unsplash (`photo-1532938911079-1b06ac7ceec7`) |
-| **Moments Gallery 5** | Compassionate patient advocacy | Unsplash (`photo-1576765608535-5f04d1e3f289`) |
-| **Moments Gallery 6** | Dedicated nurse at bedside | Unsplash (`photo-1581056771107-24ca5f033842`) |
+| **Moments Carousel (19 Images)** | Actual Nursing Journey Photographs | Local files: `first.jpeg` through `nineteenth.jpeg` |
 
 ---
 
