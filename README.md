@@ -139,15 +139,15 @@ A completely separate page with its own URL, accessed directly rather than linke
   2. Shoulder-Length Straight Wig
   3. Emerald Green Nursing Scrubs
   4. Stethoscope and Sphygmomanometer
-  5. Ward Sneakers
-  6. Ready-to-Wear Gown *(Updated with a modest, decent, sophisticated formal gown)*
-  7. Smart Wristwatch
-  8. Nursing Licence Fee
-  9. Graduation Fee
-  10. Send-Forth Project Fee
-  11. Photography
-  12. Feeding
-  13. Jotter Souvenir
+  5. Ready-to-Wear Gown *(Updated with a modest, decent, sophisticated formal gown)*
+  6. Smart Wristwatch
+  7. Nursing Licence Fee
+  8. Graduation Fee
+  9. Send-Forth Project Fee
+  10. Photography
+  11. Guest Feeding
+  12. Jotter Souvenir
+  13. Celebratory Cake
 
 ---
 

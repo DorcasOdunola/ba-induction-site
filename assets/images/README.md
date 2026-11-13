@@ -27,17 +27,17 @@ This folder and the `assets/js/data.js` file manage the photography used across 
 | :--- | :--- | :--- |
 | **1. Black Heel Shoes** | Completely black women's heels | Unsplash (`photo-1515347619252-60a4bf4fff4f`) |
 | **2. Shoulder-Length Straight Wig** | Sleek straight wig | Unsplash (`photo-1522337360788-8b13dee7a37e`) |
-| **3. Emerald Green Nursing Scrubs** | Emerald green scrubs | Unsplash (`photo-1584515933487-779824d29309`) |
-| **4. Stethoscope & Sphygmomanometer** | Diagnostic kit | Unsplash (`photo-1584515979956-d9f6e5d09982`) |
-| **5. Ward Sneakers** | Supportive ward sneakers | Unsplash (`photo-1595950653106-6c9ebd614d3a`) |
-| **6. Ready-to-Wear Gown** | Modest, decent formal gown | Unsplash (`photo-1595777457583-95e059d581b8`) |
-| **7. Smart Wristwatch** | Smart clinical timepiece | Unsplash (`photo-1523275335684-37898b6baf30`) |
-| **8. Nursing Licence Fee** | Professional licensing & seal | Unsplash (`photo-1450133064473-71024230f91b`) |
-| **9. Graduation Fee** | Academic cap & gown | Unsplash (`photo-1627556704290-2b1f5853ff78`) |
-| **10. Send-Forth Project Fee** | Departmental class celebration | Unsplash (`photo-1511632765486-a01980e01a18`) |
-| **11. Photography** | Studio camera & lighting | Unsplash (`photo-1516035069371-29a1b244cc32`) |
-| **12. Feeding** | Celebration banquet & catering | Unsplash (`photo-1555244162-803834f70033`) |
-| **13. Jotter Souvenir** | Custom keepsake notebook | Unsplash (`photo-1544716278-ca5e3f4abd8c`) |
+| **3. Emerald Green Nursing Scrubs** | Nurse in green scrubs with a stethoscope | Pexels (`5207099`) |
+| **4. Stethoscope & Sphygmomanometer** | Medical professional using a stethoscope | Unsplash (`photo-1505751172876-fa1923c5c528`) |
+| **5. Ready-to-Wear Gown** | Modest, decent formal gown | Unsplash (`photo-1595777457583-95e059d581b8`) |
+| **6. Smart Wristwatch** | Smart clinical timepiece | Unsplash (`photo-1523275335684-37898b6baf30`) |
+| **7. Nursing Licence Fee** | Healthcare worker holding a certificate | Pexels (`33836786`) |
+| **8. Graduation Fee** | African woman celebrating in a graduation gown | Pexels (`6608226`) |
+| **9. Send-Forth Project Fee** | University students conducting a medical lab study | Pexels (`40117751`) |
+| **10. Photography** | Studio camera & lighting | Unsplash (`photo-1516035069371-29a1b244cc32`) |
+| **11. Guest Feeding** | Nigerian cuisine served at a celebratory buffet | Pexels (`8166269`) |
+| **12. Jotter Souvenir** | Spiral jotter and pen for custom event branding | Pexels (`5861189`) |
+| **13. Celebratory Cake** | Elegant floral celebration cakes | Pexels (`29051739`) |
 
 ---
 

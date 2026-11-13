@@ -295,68 +295,68 @@ const SITE_DATA = {
     {
       id: "support-3",
       name: "Emerald Green Nursing Scrubs",
-      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Professional emerald green nursing scrubs"
+      image: "https://images.pexels.com/photos/5207099/pexels-photo-5207099.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      imageAlt: "Nurse in green scrubs with a stethoscope"
     },
     {
       id: "support-4",
       name: "Stethoscope and Sphygmomanometer",
-      image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Clinical stethoscope and sphygmomanometer blood pressure kit"
+      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=85",
+      imageAlt: "Medical professional using a stethoscope"
     },
     {
       id: "support-5",
-      name: "Ward Sneakers",
-      image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Supportive ward sneakers for clinical duties"
-    },
-    {
-      id: "support-6",
       name: "Ready-to-Wear Gown",
       image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Elegant modest ready-to-wear gown for celebration"
     },
     {
-      id: "support-7",
+      id: "support-6",
       name: "Smart Wristwatch",
       image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Smart wristwatch with timer and pulse tracking"
     },
     {
-      id: "support-8",
+      id: "support-7",
       name: "Nursing Licence Fee",
-      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Professional nursing council licence and credential registration"
+      image: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=1200&q=85",
+      imageAlt: "Close-up of a signed official certificate document"
+    },
+    {
+      id: "support-8",
+      name: "Graduation Fee",
+      image: "assets/images/graduation_gown.jpeg",
+      imageAlt: "Black graduation gown, mortarboard, and tassel on a white background"
     },
     {
       id: "support-9",
-      name: "Graduation Fee",
-      image: "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Academic graduation fee, gown and certificate processing"
+      name: "Send-Forth Project Fee",
+      image: "https://images.pexels.com/photos/5452233/pexels-photo-5452233.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      imageAlt: "Black medical researcher collaborating with colleagues on a clinical research project"
     },
     {
       id: "support-10",
-      name: "Send-Forth Project Fee",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Nursing class send-forth commemorative project"
-    },
-    {
-      id: "support-11",
       name: "Photography",
       image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Professional studio photoshoot session"
     },
     {
+      id: "support-11",
+      name: "Guest Feeding",
+      image: "https://images.pexels.com/photos/8166269/pexels-photo-8166269.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      imageAlt: "Nigerian cuisine served at a celebratory buffet"
+    },
+    {
       id: "support-12",
-      name: "Feeding",
-      image: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Celebration reception catering and banquet meal for guests"
+      name: "Jotter Souvenir",
+      image: "https://images.pexels.com/photos/5861189/pexels-photo-5861189.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      imageAlt: "Spiral jotter and pen for custom event branding"
     },
     {
       id: "support-13",
-      name: "Jotter Souvenir",
-      image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Customised ceremony jotter souvenir and stationery"
+      name: "Celebratory Cake",
+      image: "https://images.pexels.com/photos/29051739/pexels-photo-29051739.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      imageAlt: "Elegant floral celebration cakes"
     }
   ],
 
@@ -386,7 +386,7 @@ function generateWhatsAppSupportUrl(itemName) {
   
   if (lower.startsWith("the ")) {
     itemPhrase = itemName.trim();
-  } else if (lower === "photography" || lower === "feeding") {
+  } else if (lower === "photography" || lower === "feeding" || lower === "guest feeding") {
     itemPhrase = itemName.trim();
   } else {
     itemPhrase = "the " + itemName.trim();
