@@ -258,6 +258,11 @@ const SITE_DATA = {
       id: "moment-25",
       image: "assets/images/twenty-five.jpg",
       imageAlt: "Nursing journey memory - twenty-fifth photograph"
+    },
+    {
+      id: "moment-26",
+      image: "assets/images/story_pic4.jpg",
+      imageAlt: "Patient advocacy and compassionate nursing"
     }
   ],
 

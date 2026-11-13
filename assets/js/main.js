@@ -585,7 +585,7 @@ function initCongratulationsForm() {
         return;
       }
 
-      const fullMessage = `Hello Blessing, this is ${guestName}.\n\nCongratulations on your Nursing Induction! 🎉\n\n"${guestMessage}"\n\nMay God make everything beautiful in your time!`;
+      const fullMessage = 'Hello Blessing, this is ' + guestName + '.\n\nCongratulations on your Nursing Induction! 🎉\n\n"' + guestMessage + '"';
       const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(fullMessage)}`;
       window.open(url, "_blank", "noopener,noreferrer");
     });
