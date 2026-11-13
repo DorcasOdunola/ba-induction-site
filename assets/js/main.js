@@ -31,7 +31,13 @@ window.initMomentsCarousel = initMomentsCarousel;
  * Discourage casual saving of personal gallery photos in the browser.
  */
 function initPhotoProtection() {
-  const protectedPhotos = ".photo-speaks-img, .moments-carousel-img, .moments-carousel-card";
+  const protectedPhotos = [
+    ".photo-speaks-img",
+    ".moments-carousel-img",
+    ".moments-carousel-card",
+    ".hero-image-frame",
+    ".collage-item",
+  ].join(", ");
   let hoveredPhoto = null;
 
   document.addEventListener("contextmenu", event => {

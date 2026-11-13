@@ -525,6 +525,10 @@ img {
   object-fit: cover;
   object-position: center 25%;
   transition: var(--transition-smooth);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 .hero-image-frame:hover .hero-image {
@@ -755,6 +759,10 @@ img {
   height: 100%;
   aspect-ratio: 1;
   object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 .collage-caption {

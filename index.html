@@ -187,7 +187,10 @@
             <div class="hero-image-container">
               <div class="hero-accent-circle"></div>
 
-              <div class="hero-image-frame">
+              <div
+                class="hero-image-frame"
+                oncontextmenu="return false;"
+              >
                 <!-- <span class="placeholder-note-badge">
                   <i class="bi bi-camera me-1"></i> Placeholder Portrait
                 </span> -->
@@ -195,6 +198,7 @@
                   src="assets/images/third_personal.jpeg"
                   alt="Adewumi Blessing Mary - Nursing Induction Placeholder Portrait"
                   class="hero-image"
+                  draggable="false"
                   onerror="handleImgFallback(this, 'Blessing Mary')"
                 />
               </div>
@@ -298,38 +302,42 @@
           <!-- Collage Grid -->
           <div class="col-lg-5">
             <div class="journey-collage reveal-on-scroll delay-1">
-              <div class="collage-item">
+              <div class="collage-item" oncontextmenu="return false;">
                 <img
                   src="assets/images/story_pic2.jpg"
                   alt="Clinical practice and stethoscope"
                   loading="lazy"
+                  draggable="false"
                   onerror="handleImgFallback(this, 'Clinical Practice')"
                 />
                 <div class="collage-caption">Clinical Dedication</div>
               </div>
-              <div class="collage-item">
+              <div class="collage-item" oncontextmenu="return false;">
                 <img
                   src="assets/images/story_pic1.jpg"
                   alt="Academic milestone and achievement"
                   loading="lazy"
+                  draggable="false"
                   onerror="handleImgFallback(this, 'Academic Milestone')"
                 />
                 <div class="collage-caption">Academic Triumph</div>
               </div>
-              <div class="collage-item">
+              <div class="collage-item" oncontextmenu="return false;">
                 <img
                   src="assets/images/story_pic3.jpg"
                   alt="Hospital wards and healthcare learning"
                   loading="lazy"
+                  draggable="false"
                   onerror="handleImgFallback(this, 'Hospital Ward')"
                 />
                 <div class="collage-caption">Healing Hands</div>
               </div>
-              <div class="collage-item">
+              <div class="collage-item" oncontextmenu="return false;">
                 <img
                   src="assets/images/story_pic4.jpg"
                   alt="Compassionate patient nursing"
                   loading="lazy"
+                  draggable="false"
                   onerror="handleImgFallback(this, 'Compassionate Care')"
                 />
                 <div class="collage-caption">Patient Advocacy</div>
@@ -423,7 +431,7 @@
           </p>
         </div>
 
-        <!-- Seven selected photos with captions -->
+        <!-- Eight selected photos with captions -->
         <div class="row g-4">
           <div class="col-md-6 col-lg-3 reveal-on-scroll">
             <div class="photo-speaks-card">
@@ -536,6 +544,22 @@
               </div>
               <div class="photo-speaks-body">
                 <p class="photo-speaks-caption">Professional Examination 3</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-on-scroll delay-3">
+            <div class="photo-speaks-card">
+              <div class="photo-speaks-img-box">
+                <img
+                  src="assets/images/twentieth.jpg"
+                  alt="Midwifery Posting at Oyo"
+                  class="photo-speaks-img"
+                  loading="lazy"
+                  draggable="false"
+                />
+              </div>
+              <div class="photo-speaks-body">
+                <p class="photo-speaks-caption">Midwifery Posting at Oyo</p>
               </div>
             </div>
           </div>
