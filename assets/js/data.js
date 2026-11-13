@@ -281,6 +281,42 @@ const SITE_DATA = {
   // ------------------------------------------------------------------
   supportItems: [
     {
+      id: "support-8",
+      name: "Graduation Fee",
+      image: "assets/images/graduation_gown.jpeg",
+      imageAlt: "Black graduation gown, mortarboard, and tassel on a white background"
+    },
+    {
+      id: "support-7",
+      name: "Nursing Licence Fee",
+      image: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=1200&q=85",
+      imageAlt: "Close-up of a signed official certificate document"
+    },
+    {
+      id: "support-9",
+      name: "Send-Forth Project Fee",
+      image: "https://images.pexels.com/photos/5452233/pexels-photo-5452233.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      imageAlt: "Black medical researcher collaborating with colleagues on a clinical research project"
+    },
+    {
+      id: "support-4",
+      name: "Stethoscope and Sphygmomanometer",
+      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=85",
+      imageAlt: "Medical professional using a stethoscope"
+    },
+    {
+      id: "support-3",
+      name: "Emerald Green Nursing Scrubs",
+      image: "https://images.pexels.com/photos/5207099/pexels-photo-5207099.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      imageAlt: "Nurse in green scrubs with a stethoscope"
+    },
+    {
+      id: "support-5",
+      name: "Ready-to-Wear Gown",
+      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Elegant modest ready-to-wear gown for celebration"
+    },
+    {
       id: "support-1",
       name: "Black Heel Shoes",
       image: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=800&q=80",
@@ -293,46 +329,10 @@ const SITE_DATA = {
       imageAlt: "Sleek straight hair wig"
     },
     {
-      id: "support-3",
-      name: "Emerald Green Nursing Scrubs",
-      image: "https://images.pexels.com/photos/5207099/pexels-photo-5207099.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      imageAlt: "Nurse in green scrubs with a stethoscope"
-    },
-    {
-      id: "support-4",
-      name: "Stethoscope and Sphygmomanometer",
-      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=85",
-      imageAlt: "Medical professional using a stethoscope"
-    },
-    {
-      id: "support-5",
-      name: "Ready-to-Wear Gown",
-      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
-      imageAlt: "Elegant modest ready-to-wear gown for celebration"
-    },
-    {
       id: "support-6",
       name: "Smart Wristwatch",
       image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Smart wristwatch with timer and pulse tracking"
-    },
-    {
-      id: "support-7",
-      name: "Nursing Licence Fee",
-      image: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=1200&q=85",
-      imageAlt: "Close-up of a signed official certificate document"
-    },
-    {
-      id: "support-8",
-      name: "Graduation Fee",
-      image: "assets/images/graduation_gown.jpeg",
-      imageAlt: "Black graduation gown, mortarboard, and tassel on a white background"
-    },
-    {
-      id: "support-9",
-      name: "Send-Forth Project Fee",
-      image: "https://images.pexels.com/photos/5452233/pexels-photo-5452233.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      imageAlt: "Black medical researcher collaborating with colleagues on a clinical research project"
     },
     {
       id: "support-10",
