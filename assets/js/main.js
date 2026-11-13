@@ -31,7 +31,7 @@ window.initMomentsCarousel = initMomentsCarousel;
  * Discourage casual saving of personal gallery photos in the browser.
  */
 function initPhotoProtection() {
-  const protectedPhotos = ".photo-speaks-img, .moments-carousel-img";
+  const protectedPhotos = ".photo-speaks-img, .moments-carousel-img, .moments-carousel-card";
   let hoveredPhoto = null;
 
   document.addEventListener("contextmenu", event => {
@@ -193,8 +193,7 @@ function initNavbar() {
 
 /* --------------------------------------------------------------------
    2. MOMENTS ALONG THE WAY - RESPONSIVE IMAGE CAROUSEL
-   - Shows ~3 photos at a time on desktop
-   - Shows 1 photo at a time on mobile (with preview)
+   - Shows one photo at a time on all screen sizes
    - Left/Right arrow navigation
    - Pagination dots
    - Touch/swipe navigation
@@ -237,16 +236,8 @@ function initMomentsCarousel() {
   let prevTranslate = 0;
   let isDragging = false;
 
-  function getVisibleCount() {
-    const width = window.innerWidth;
-    if (width >= 992) return 3;
-    if (width >= 576) return 2;
-    return 1;
-  }
-
   function getMaxIndex() {
-    const visible = getVisibleCount();
-    return Math.max(0, photos.length - visible);
+    return photos.length - 1;
   }
 
   function renderDots() {
@@ -259,7 +250,7 @@ function initMomentsCarousel() {
         type="button" 
         class="moments-carousel-dot${i === currentIndex ? ' active' : ''}" 
         data-dot-index="${i}" 
-        aria-label="Go to slide group ${i + 1}"
+        aria-label="Go to photo ${i + 1}"
       ></button>
     `).join("");
 
@@ -279,6 +270,26 @@ function initMomentsCarousel() {
 
     const slides = track.querySelectorAll(".moments-carousel-slide");
     if (!slides.length) return;
+
+    slides.forEach((slide, index) => {
+      const card = slide.querySelector(".moments-carousel-card");
+      if (!card) return;
+
+      if (index === currentIndex) {
+        const backdropUrl = new URL(
+          photos[index].image,
+          document.baseURI
+        ).href;
+        card.style.setProperty(
+          "--moments-carousel-backdrop",
+          `url("${backdropUrl}")`
+        );
+        card.classList.add("has-backdrop");
+      } else {
+        card.classList.remove("has-backdrop");
+        card.style.removeProperty("--moments-carousel-backdrop");
+      }
+    });
 
     const slideWidth = slides[0].getBoundingClientRect().width;
     const gap = 24; // 1.5rem in px
@@ -344,7 +355,7 @@ function initMomentsCarousel() {
     currentTranslate = 0;
   });
 
-  // Mouse drag support for desktop
+  // Mouse swipe support for desktop
   viewport.addEventListener("mousedown", (e) => {
     isDragging = true;
     startX = e.clientX;

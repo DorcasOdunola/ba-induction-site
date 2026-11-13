@@ -228,6 +228,36 @@ const SITE_DATA = {
       image: "assets/images/nineteenth.jpeg",
       fallbackImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
       imageAlt: "Nursing journey memory - milestone celebration"
+    },
+    {
+      id: "moment-20",
+      image: "assets/images/twentieth.jpg",
+      imageAlt: "Nursing journey memory - twentieth photograph"
+    },
+    {
+      id: "moment-21",
+      image: "assets/images/twenty-first.jpg",
+      imageAlt: "Nursing journey memory - twenty-first photograph"
+    },
+    {
+      id: "moment-22",
+      image: "assets/images/twenty-two.jpg",
+      imageAlt: "Nursing journey memory - twenty-second photograph"
+    },
+    {
+      id: "moment-23",
+      image: "assets/images/twenty-three.jpg",
+      imageAlt: "Nursing journey memory - twenty-third photograph"
+    },
+    {
+      id: "moment-24",
+      image: "assets/images/twenty-four.jpg",
+      imageAlt: "Nursing journey memory - twenty-fourth photograph"
+    },
+    {
+      id: "moment-25",
+      image: "assets/images/twenty-five.jpg",
+      imageAlt: "Nursing journey memory - twenty-fifth photograph"
     }
   ],
 
